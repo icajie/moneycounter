@@ -173,5 +173,12 @@
     "description": "Bev",
     "date": "2026-07-20",
     "createdAt": "2026-07-21T06:59:58.285Z"
+  },
+  {
+    "id": "aa231c30-1db0-44cd-8ee9-d49c344ef1d5",
+    "amount": -100,
+    "description": "Iela",
+    "date": "2026-07-20",
+    "createdAt": "2026-07-21T07:00:05.937Z"
   }
 ]
