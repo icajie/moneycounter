@@ -562,14 +562,17 @@
         return;
       }
 
-      ledger.innerHTML = [...withBal].reverse().map(tx => {
+      const sorted = [...withBal].sort((a, b) => new Date(b.date) - new Date(a.date));
+      ledger.innerHTML = sorted.map(tx => {
         const isIn = tx.amount > 0;
         const sel  = tx.id === selectedId;
+        const showAdded = tx.createdAt && tx.createdAt !== tx.date;
         return `<div class="tx ${sel ? 'selected' : ''}" onclick="selectTx('${tx.id}')">
           <div class="tx-icon ${isIn ? 'in' : 'out'}">${isIn ? '↑' : '↓'}</div>
           <div class="tx-info">
             <div class="tx-desc">${escHtml(tx.description || 'No description')}</div>
-            <div class="tx-date">${fmtDate(tx.date)}</div>
+            <div class="tx-date">Date: ${fmtDate(tx.date)}</div>
+            ${showAdded ? `<div class="tx-date" style="font-size:0.7rem;opacity:0.7">Added: ${fmtDate(tx.createdAt)}</div>` : ''}
           </div>
           <div class="tx-right">
             <div class="tx-amount ${isIn ? 'in' : 'out'}">${isIn ? '+' : '−'}${fmt(tx.amount)}</div>
@@ -641,6 +644,7 @@
         amount: isAdd ? amtRaw : -amtRaw,
         description: desc,
         date: txDate
+        createdAt: new Date().toISOString()
       };
 
       transactions.push(tx);
