@@ -1,12 +1,5 @@
 [
   {
-    "id": "d01ef916-ecf1-4a52-b727-9e57ecdf9acb",
-    "amount": 22340,
-    "description": "Opening Balance",
-    "date": "2026-07-01",
-    "createdAt": "2026-07-21T06:52:48.846Z"
-  },
-  {
     "id": "fbecfc84-6df3-4b20-9bc9-cd22c1601c30",
     "amount": 430,
     "description": "Till",
