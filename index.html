@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Counter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f0fdf4;
+      --surface: #ffffff;
+      --border: #d1fae5;
+      --accent: #10b981;
+      --accent-dark: #059669;
+      --red: #ef4444;
+      --red-bg: #fef2f2;
+      --red-border: #fecaca;
+      --text: #111827;
+      --muted: #6b7280;
+      --muted-light: #9ca3af;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: var(--text);
+    }
+
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .btn-logout {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--muted);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.375rem 0.75rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .btn-logout:hover { color: var(--text); border-color: #9ca3af; }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* ── Balance card ── */
+    .balance-card {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      border-radius: 1.25rem;
+      padding: 1.75rem 1.5rem;
+      color: #fff;
+      margin-bottom: 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .balance-card::after {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 220px;
+      height: 220px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+
+    .balance-label {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.375rem;
+    }
+
+    .balance-amount {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .balance-sub {
+      margin-top: 1.25rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .balance-sub-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.125rem;
+    }
+
+    .balance-sub-label {
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+
+    .balance-sub-value {
+      font-size: 0.9375rem;
+      font-weight: 600;
+    }
+
+    /* ── Stats row ── */
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.875rem;
+      padding: 1rem 1.125rem;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-value {
+      font-size: 1.375rem;
+      font-weight: 700;
+    }
+
+    .stat-value.green { color: var(--accent-dark); }
+    .stat-value.red   { color: var(--red); }
+
+    /* ── Composer ── */
+    .composer {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .composer-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.875rem;
+    }
+
+    .composer-row {
+      display: flex;
+      gap: 0.625rem;
+      flex-wrap: wrap;
+    }
+
+    .composer-row input {
+      flex: 1;
+      min-width: 100px;
+      padding: 0.625rem 0.75rem;
+      border: 1.5px solid var(--border);
+      border-radius: 0.5rem;
+      font-size: 0.9375rem;
+      font-family: inherit;
+      color: var(--text);
+      background: #fff;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .composer-row input:focus { border-color: var(--accent); }
+
+    .composer-btns {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.625rem;
+    }
+
+    .btn-add, .btn-remove {
+      flex: 1;
+      padding: 0.625rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      font-family: inherit;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+
+    .btn-add {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-remove {
+      background: var(--red-bg);
+      color: var(--red);
+      border: 1.5px solid var(--red-border);
+    }
+
+    .btn-add:hover, .btn-remove:hover { opacity: 0.88; }
+    .btn-add:active, .btn-remove:active { transform: scale(0.97); }
+
+    /* ── Ledger ── */
+    .ledger-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.625rem;
+    }
+
+    .ledger-title {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .ledger-count {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    .ledger {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .ledger-empty {
+      padding: 2.5rem 1rem;
+      text-align: center;
+      color: var(--muted-light);
+      font-size: 0.9375rem;
+    }
+
+    .tx {
+      display: flex;
+      align-items: center;
+      padding: 0.875rem 1rem;
+      border-bottom: 1px solid var(--border);
+      gap: 0.875rem;
+      transition: background 0.1s;
+      cursor: pointer;
+    }
+
+    .tx:last-child { border-bottom: none; }
+    .tx:hover { background: #f9fafb; }
+    .tx.selected { background: #fef2f2; }
+
+    .tx-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9375rem;
+      flex-shrink: 0;
+    }
+
+    .tx-icon.in  { background: #d1fae5; }
+    .tx-icon.out { background: var(--red-bg); }
+
+    .tx-info { flex: 1; min-width: 0; }
+
+    .tx-desc {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tx-date {
+      font-size: 0.75rem;
+      color: var(--muted-light);
+      margin-top: 0.125rem;
+    }
+
+    .tx-right { text-align: right; }
+
+    .tx-amount {
+      font-size: 0.9375rem;
+      font-weight: 700;
+    }
+
+    .tx-amount.in  { color: var(--accent-dark); }
+    .tx-amount.out { color: var(--red); }
+
+    .tx-balance {
+      font-size: 0.75rem;
+      color: var(--muted-light);
+      margin-top: 0.125rem;
+    }
+
+    /* ── Delete bar ── */
+    .delete-bar {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1f2937;
+      color: #fff;
+      border-radius: 0.875rem;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.875rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      white-space: nowrap;
+    }
+
+    .delete-bar button {
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.4rem 0.875rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .delete-bar .cancel {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ── Toast ── */
+    .toast {
+      position: fixed;
+      top: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(-80px);
+      background: #1f2937;
+      color: #fff;
+      border-radius: 0.625rem;
+      padding: 0.625rem 1.125rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: transform 0.25s ease;
+      pointer-events: none;
+      z-index: 100;
+      white-space: nowrap;
+    }
+
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* ── Loading spinner ── */
+    .spinner {
+      width: 20px;
+      height: 20px;
+      border: 2.5px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin: 2rem auto;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">💰</div>
+      Money Counter
+    </div>
+    <button class="btn-logout" onclick="logout()">Log out</button>
+  </header>
+
+  <main>
+    <!-- Balance card -->
+    <div class="balance-card">
+      <div class="balance-label">Current Balance</div>
+      <div class="balance-amount" id="balance">$0.00</div>
+      <div class="balance-sub">
+        <div class="balance-sub-item">
+          <span class="balance-sub-label">Money In</span>
+          <span class="balance-sub-value" id="totalIn">$0.00</span>
+        </div>
+        <div class="balance-sub-item">
+          <span class="balance-sub-label">Money Out</span>
+          <span class="balance-sub-value" id="totalOut">$0.00</span>
+        </div>
+        <div class="balance-sub-item">
+          <span class="balance-sub-label">Transactions</span>
+          <span class="balance-sub-value" id="txCount">0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-label">Largest In</div>
+        <div class="stat-value green" id="largestIn">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Largest Out</div>
+        <div class="stat-value red" id="largestOut">—</div>
+      </div>
+    </div>
+
+    <!-- Composer -->
+    <div class="composer">
+      <div class="composer-title">Add Transaction</div>
+      <div class="composer-row">
+        <input type="number" id="amount" placeholder="Amount (e.g. 50)" min="0.01" step="0.01" />
+        <input type="text" id="desc" placeholder="Description" maxlength="60" />
+      </div>
+      <div class="composer-btns">
+        <button class="btn-add" onclick="submitTx(true)">+ Add Money</button>
+        <button class="btn-remove" onclick="submitTx(false)">− Remove Money</button>
+      </div>
+    </div>
+
+    <!-- Ledger -->
+    <div class="ledger-header">
+      <span class="ledger-title">Transactions</span>
+      <span class="ledger-count" id="ledgerCount"></span>
+    </div>
+    <div class="ledger" id="ledger">
+      <div class="spinner"></div>
+    </div>
+  </main>
+
+  <!-- Delete bar -->
+  <div class="delete-bar" id="deleteBar" style="display:none">
+    <span id="deleteLabel">1 selected</span>
+    <button class="cancel" onclick="clearSelection()">Cancel</button>
+    <button onclick="deleteSelected()">Delete</button>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ── Auth guard ──
+    (async function() {
+      const stored = sessionStorage.getItem('auth');
+      if (!stored) { location.replace('/login.html'); return; }
+      let config;
+      try {
+        const r = await fetch('/config.json');
+        config = await r.json();
+      } catch { location.replace('/login.html'); return; }
+      if (stored !== config.passwordHash) {
+        sessionStorage.removeItem('auth');
+        location.replace('/login.html');
+      }
+    })();
+
+    function logout() {
+      sessionStorage.removeItem('auth');
+      location.replace('/login.html');
+    }
+
+    // ── State ──
+    let transactions = [];
+    let selectedId = null;
+
+    // ── Helpers ──
+    function fmt(n) {
+      return '$' + Math.abs(n).toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function fmtDate(iso) {
+      return new Date(iso).toLocaleString('en-AU', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    }
+
+    let toastTimer;
+    function toast(msg) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('show'), 2800);
+    }
+
+    // ── Render ──
+    function render() {
+      // Running balances
+      let running = 0;
+      const withBal = transactions.map(tx => {
+        running += tx.amount;
+        return { ...tx, balance: running };
+      });
+
+      // Summary
+      const balance = running;
+      const totalIn  = transactions.filter(t => t.amount > 0).reduce((s, t) => s + t.amount, 0);
+      const totalOut = transactions.filter(t => t.amount < 0).reduce((s, t) => s + t.amount, 0);
+      const largestIn  = Math.max(0, ...transactions.filter(t => t.amount > 0).map(t => t.amount));
+      const largestOut = Math.min(0, ...transactions.filter(t => t.amount < 0).map(t => t.amount));
+
+      document.getElementById('balance').textContent = fmt(balance);
+      document.getElementById('totalIn').textContent  = fmt(totalIn);
+      document.getElementById('totalOut').textContent = fmt(Math.abs(totalOut));
+      document.getElementById('txCount').textContent  = transactions.length;
+      document.getElementById('largestIn').textContent  = largestIn  ? fmt(largestIn)  : '—';
+      document.getElementById('largestOut').textContent = largestOut ? fmt(Math.abs(largestOut)) : '—';
+      document.getElementById('ledgerCount').textContent = transactions.length ? transactions.length + ' entries' : '';
+
+      const ledger = document.getElementById('ledger');
+      if (!withBal.length) {
+        ledger.innerHTML = '<div class="ledger-empty">No transactions yet. Add your first one above.</div>';
+        return;
+      }
+
+      ledger.innerHTML = [...withBal].reverse().map(tx => {
+        const isIn = tx.amount > 0;
+        const sel  = tx.id === selectedId;
+        return `<div class="tx ${sel ? 'selected' : ''}" onclick="selectTx('${tx.id}')">
+          <div class="tx-icon ${isIn ? 'in' : 'out'}">${isIn ? '↑' : '↓'}</div>
+          <div class="tx-info">
+            <div class="tx-desc">${escHtml(tx.description || 'No description')}</div>
+            <div class="tx-date">${fmtDate(tx.date)}</div>
+          </div>
+          <div class="tx-right">
+            <div class="tx-amount ${isIn ? 'in' : 'out'}">${isIn ? '+' : '−'}${fmt(tx.amount)}</div>
+            <div class="tx-balance">Bal: ${fmt(tx.balance)}</div>
+          </div>
+        </div>`;
+      }).join('');
+
+      // Delete bar
+      const bar = document.getElementById('deleteBar');
+      if (selectedId) {
+        bar.style.display = 'flex';
+        document.getElementById('deleteLabel').textContent = '1 transaction selected';
+      } else {
+        bar.style.display = 'none';
+      }
+    }
+
+    function escHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function selectTx(id) {
+      selectedId = selectedId === id ? null : id;
+      render();
+    }
+
+    function clearSelection() {
+      selectedId = null;
+      render();
+    }
+
+    // ── Load ──
+    async function load() {
+      try {
+        const r = await fetch('/api/transactions');
+        const data = await r.json();
+        if (data.transactions) transactions = data.transactions;
+        render();
+      } catch {
+        document.getElementById('ledger').innerHTML = '<div class="ledger-empty">Failed to load data.</div>';
+      }
+    }
+
+    // ── Save ──
+    async function save() {
+      const r = await fetch('/api/transactions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ transactions })
+      });
+      const data = await r.json();
+      if (!r.ok) throw new Error(data.error || 'Save failed');
+    }
+
+    // ── Add / Remove ──
+    async function submitTx(isAdd) {
+      const amtRaw = parseFloat(document.getElementById('amount').value);
+      const desc   = document.getElementById('desc').value.trim();
+
+      if (!amtRaw || amtRaw <= 0) { toast('Enter a valid amount.'); return; }
+      if (!desc) { toast('Enter a description.'); return; }
+
+      const tx = {
+        id: crypto.randomUUID(),
+        amount: isAdd ? amtRaw : -amtRaw,
+        description: desc,
+        date: new Date().toISOString()
+      };
+
+      transactions.push(tx);
+      document.getElementById('amount').value = '';
+      document.getElementById('desc').value = '';
+      render();
+
+      try {
+        await save();
+        toast(isAdd ? 'Money added.' : 'Money removed.');
+      } catch (e) {
+        transactions.pop();
+        render();
+        toast('Failed to save: ' + e.message);
+      }
+    }
+
+    // ── Delete ──
+    async function deleteSelected() {
+      if (!selectedId) return;
+      const prev = [...transactions];
+      transactions = transactions.filter(t => t.id !== selectedId);
+      selectedId = null;
+      render();
+
+      try {
+        await save();
+        toast('Transaction deleted.');
+      } catch (e) {
+        transactions = prev;
+        render();
+        toast('Failed to delete: ' + e.message);
+      }
+    }
+
+    // ── Keyboard shortcuts ──
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') clearSelection();
+      if ((e.key === 'Delete' || e.key === 'Backspace') && selectedId && document.activeElement.tagName !== 'INPUT') {
+        e.preventDefault();
+        deleteSelected();
+      }
+    });
+
+    load();
+  </script>
+</body>
+</html>
