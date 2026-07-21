@@ -166,5 +166,12 @@
     "description": "Sandy",
     "date": "2026-07-20",
     "createdAt": "2026-07-21T06:59:50.236Z"
+  },
+  {
+    "id": "5d24aa32-2736-4705-9839-09b1445c06f0",
+    "amount": -255,
+    "description": "Bev",
+    "date": "2026-07-20",
+    "createdAt": "2026-07-21T06:59:58.285Z"
   }
 ]
