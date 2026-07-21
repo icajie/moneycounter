@@ -782,5 +782,12 @@
     "description": "Veggies",
     "date": "2026-06-14",
     "createdAt": "2026-07-21T07:59:30.493Z"
+  },
+  {
+    "id": "18278783-52d0-4b2d-af1a-32fcc1b54b40",
+    "amount": 3765,
+    "description": "till from 16-Jun to 23-Jun",
+    "date": "2026-06-23",
+    "createdAt": "2026-07-21T08:00:56.891Z"
   }
 ]
