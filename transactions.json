@@ -621,5 +621,12 @@
     "description": "till 05-May to 16th May",
     "date": "2026-05-17",
     "createdAt": "2026-07-21T07:48:12.095Z"
+  },
+  {
+    "id": "e37bac82-9243-4c6c-a2a4-43e39b8be41e",
+    "amount": 1875,
+    "description": "Till from 18-May to 20-May",
+    "date": "2026-05-20",
+    "createdAt": "2026-07-21T07:48:48.255Z"
   }
 ]
