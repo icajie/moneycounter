@@ -250,5 +250,12 @@
     "description": "till",
     "date": "2026-06-27",
     "createdAt": "2026-07-21T07:24:55.271Z"
+  },
+  {
+    "id": "4e95b60b-5e2b-471e-986b-615d136cdb2d",
+    "amount": -255,
+    "description": "Bev",
+    "date": "2026-06-28",
+    "createdAt": "2026-07-21T07:25:12.824Z"
   }
 ]
