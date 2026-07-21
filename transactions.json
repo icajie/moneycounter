@@ -278,5 +278,12 @@
     "description": "till 28th-1st Jul",
     "date": "2026-07-01",
     "createdAt": "2026-07-21T07:26:08.562Z"
+  },
+  {
+    "id": "9bcbffc2-79f7-490a-ba90-5fdd3e54eb6e",
+    "amount": -175,
+    "description": "Arafat",
+    "date": "2026-07-01",
+    "createdAt": "2026-07-21T07:26:48.406Z"
   }
 ]
