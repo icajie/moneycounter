@@ -768,5 +768,12 @@
     "description": "Beni",
     "date": "2026-06-12",
     "createdAt": "2026-07-21T07:59:02.525Z"
+  },
+  {
+    "id": "d2013dc6-e104-4c98-b2fe-569063033700",
+    "amount": -380,
+    "description": "Tim",
+    "date": "2026-06-14",
+    "createdAt": "2026-07-21T07:59:18.873Z"
   }
 ]
