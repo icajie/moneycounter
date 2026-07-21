@@ -618,10 +618,10 @@
       }
 
       const sorted = [...withBal].sort((a, b) => {
-        const byCreated = createdAtMs(b) - createdAtMs(a);
-        if (byCreated !== 0) return byCreated;
         const byDate = selectedDateMs(b.date) - selectedDateMs(a.date);
         if (byDate !== 0) return byDate;
+        const byCreated = createdAtMs(b) - createdAtMs(a);
+        if (byCreated !== 0) return byCreated;
         return String(b.id).localeCompare(String(a.id));
       });
       ledger.innerHTML = sorted.map(tx => {
