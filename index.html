@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -460,6 +460,9 @@
         <input type="number" id="amount" placeholder="Amount (e.g. 50)" min="0.01" step="0.01" />
         <input type="text" id="desc" placeholder="Description" maxlength="60" />
       </div>
+      <div class="composer-row" style="margin-top:0.625rem">
+        <input type="datetime-local" id="txdate" />
+      </div>
       <div class="composer-btns">
         <button class="btn-add" onclick="submitTx(true)">+ Add Money</button>
         <button class="btn-remove" onclick="submitTx(false)">− Remove Money</button>
@@ -630,16 +633,21 @@
       if (!amtRaw || amtRaw <= 0) { toast('Enter a valid amount.'); return; }
       if (!desc) { toast('Enter a description.'); return; }
 
+      const dateVal = document.getElementById('txdate').value;
+      const txDate  = dateVal ? new Date(dateVal).toISOString() : new Date().toISOString();
+
       const tx = {
         id: crypto.randomUUID(),
         amount: isAdd ? amtRaw : -amtRaw,
         description: desc,
-        date: new Date().toISOString()
+        date: txDate
       };
 
       transactions.push(tx);
       document.getElementById('amount').value = '';
       document.getElementById('desc').value = '';
+      // Reset date to current time for next entry
+      document.getElementById('txdate').value = toLocalDateTimeInput(new Date());
       render();
 
       try {
@@ -678,6 +686,14 @@
         deleteSelected();
       }
     });
+
+    function toLocalDateTimeInput(d) {
+      const pad = n => String(n).padStart(2, '0');
+      return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    }
+
+    // Set date input default
+    document.getElementById('txdate').value = toLocalDateTimeInput(new Date());
 
     load();
   </script>
