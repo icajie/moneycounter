@@ -537,5 +537,12 @@
     "description": "till",
     "date": "2026-04-30",
     "createdAt": "2026-07-21T07:44:54.001Z"
+  },
+  {
+    "id": "e687ca1d-0b50-4338-a452-ffa88bdd9fc3",
+    "amount": -175,
+    "description": "Adj",
+    "date": "2026-04-30",
+    "createdAt": "2026-07-21T07:45:17.573Z"
   }
 ]
