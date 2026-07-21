@@ -560,7 +560,12 @@
     // ── Render ──
     function render() {
       // Running balances by selected date (oldest -> newest), so newest row shows current total
-      const asc = [...transactions].sort((a, b) => {
+      const normalized = transactions.map(tx => ({
+        ...tx,
+        amount: Number(tx.amount) || 0
+      }));
+
+      const asc = [...normalized].sort((a, b) => {
         const byDate = selectedDateMs(a.date) - selectedDateMs(b.date);
         if (byDate !== 0) return byDate;
         const aCreated = new Date(a.createdAt || a.date || 0).getTime();
@@ -575,25 +580,25 @@
         balanceById.set(tx.id, running);
       });
 
-      const withBal = transactions.map(tx => ({
+      const withBal = normalized.map(tx => ({
         ...tx,
         balance: balanceById.get(tx.id) ?? 0
       }));
 
       // Summary
       const balance = running;
-      const totalIn  = transactions.filter(t => t.amount > 0).reduce((s, t) => s + t.amount, 0);
-      const totalOut = transactions.filter(t => t.amount < 0).reduce((s, t) => s + t.amount, 0);
-      const largestIn  = Math.max(0, ...transactions.filter(t => t.amount > 0).map(t => t.amount));
-      const largestOut = Math.min(0, ...transactions.filter(t => t.amount < 0).map(t => t.amount));
+      const totalIn  = normalized.filter(t => t.amount > 0).reduce((s, t) => s + t.amount, 0);
+      const totalOut = normalized.filter(t => t.amount < 0).reduce((s, t) => s + t.amount, 0);
+      const largestIn  = Math.max(0, ...normalized.filter(t => t.amount > 0).map(t => t.amount));
+      const largestOut = Math.min(0, ...normalized.filter(t => t.amount < 0).map(t => t.amount));
 
       document.getElementById('balance').textContent = fmt(balance);
       document.getElementById('totalIn').textContent  = fmt(totalIn);
       document.getElementById('totalOut').textContent = fmt(Math.abs(totalOut));
-      document.getElementById('txCount').textContent  = transactions.length;
+      document.getElementById('txCount').textContent  = normalized.length;
       document.getElementById('largestIn').textContent  = largestIn  ? fmt(largestIn)  : '—';
       document.getElementById('largestOut').textContent = largestOut ? fmt(Math.abs(largestOut)) : '—';
-      document.getElementById('ledgerCount').textContent = transactions.length ? transactions.length + ' entries' : '';
+      document.getElementById('ledgerCount').textContent = normalized.length ? normalized.length + ' entries' : '';
 
       const ledger = document.getElementById('ledger');
       if (!withBal.length) {
@@ -651,6 +656,7 @@
         if (data.transactions) {
           transactions = data.transactions.map(tx => ({
             ...tx,
+            amount: Number(tx.amount) || 0,
             createdAt: tx.createdAt || tx.date || new Date().toISOString()
           }));
         }
