@@ -803,5 +803,12 @@
     "description": "Arafat",
     "date": "2026-06-26",
     "createdAt": "2026-07-21T08:01:27.373Z"
+  },
+  {
+    "id": "c85fc3f7-e1b0-49cb-a693-b87d7cb0465a",
+    "amount": -140,
+    "description": "Anik",
+    "date": "2026-06-26",
+    "createdAt": "2026-07-21T08:01:36.568Z"
   }
 ]
