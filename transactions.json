@@ -502,5 +502,12 @@
     "description": "Fridge repairs",
     "date": "2026-04-22",
     "createdAt": "2026-07-21T07:42:02.100Z"
+  },
+  {
+    "id": "25a48f7d-ad61-420b-8272-792862cf15b2",
+    "amount": 3310,
+    "description": "Till 23-Apr to 28th Apr",
+    "date": "2026-04-28",
+    "createdAt": "2026-07-21T07:42:54.245Z"
   }
 ]
