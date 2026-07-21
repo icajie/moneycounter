@@ -26,5 +26,12 @@
     "description": "11",
     "date": "2026-07-20",
     "createdAt": "2026-07-21T03:06:58.070Z"
+  },
+  {
+    "id": "98d83d1c-4e64-4ffc-b5f7-c1c56a7eb1c2",
+    "amount": -3,
+    "description": "3",
+    "date": "2026-07-21",
+    "createdAt": "2026-07-21T03:07:03.815Z"
   }
 ]
