@@ -684,5 +684,12 @@
     "description": "Plumber",
     "date": "2026-05-28",
     "createdAt": "2026-07-21T07:51:40.457Z"
+  },
+  {
+    "id": "e480f8be-664d-4a27-8e14-f662c176f78e",
+    "amount": -650,
+    "description": "Dio",
+    "date": "2026-05-30",
+    "createdAt": "2026-07-21T07:51:52.891Z"
   }
 ]
