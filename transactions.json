@@ -698,5 +698,12 @@
     "description": "Ather",
     "date": "2026-05-30",
     "createdAt": "2026-07-21T07:52:03.785Z"
+  },
+  {
+    "id": "7afce321-5d36-4fbd-a16a-652203f8f5c0",
+    "amount": 2975,
+    "description": "till from 31-May to 03-Jun",
+    "date": "2026-06-03",
+    "createdAt": "2026-07-21T07:54:55.551Z"
   }
 ]
