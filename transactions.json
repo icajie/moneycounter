@@ -201,5 +201,12 @@
     "description": "MD",
     "date": "2026-07-21",
     "createdAt": "2026-07-21T07:00:42.221Z"
+  },
+  {
+    "id": "a33ff8d4-5ceb-4a80-af5e-91c94d4fe49e",
+    "amount": -80,
+    "description": "Short adjustment",
+    "date": "2026-07-21",
+    "createdAt": "2026-07-21T07:07:14.397Z"
   }
 ]
