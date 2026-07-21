@@ -180,5 +180,12 @@
     "description": "Iela",
     "date": "2026-07-20",
     "createdAt": "2026-07-21T07:00:05.937Z"
+  },
+  {
+    "id": "0052e3fe-3344-4e18-936c-16d4f3dfdac5",
+    "amount": -100,
+    "description": "Tim",
+    "date": "2026-07-20",
+    "createdAt": "2026-07-21T07:00:14.373Z"
   }
 ]
