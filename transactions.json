@@ -271,5 +271,12 @@
     "description": "Till",
     "date": "2026-06-29",
     "createdAt": "2026-07-21T07:25:46.512Z"
+  },
+  {
+    "id": "4b1d7ac8-31f9-45a9-8400-c387edd56f50",
+    "amount": 1670,
+    "description": "till 28th-1st Jul",
+    "date": "2026-07-01",
+    "createdAt": "2026-07-21T07:26:08.562Z"
   }
 ]
