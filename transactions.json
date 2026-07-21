@@ -215,5 +215,12 @@
     "description": "Op Balancs",
     "date": "2026-06-26",
     "createdAt": "2026-07-21T07:23:17.511Z"
+  },
+  {
+    "id": "abf9e3be-2717-46e1-95ab-8005c1143406",
+    "amount": -275,
+    "description": "Ather",
+    "date": "2026-06-26",
+    "createdAt": "2026-07-21T07:23:35.848Z"
   }
 ]
