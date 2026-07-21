@@ -159,5 +159,12 @@
     "description": "Arafat",
     "date": "2026-07-20",
     "createdAt": "2026-07-21T06:59:39.591Z"
+  },
+  {
+    "id": "4da50e26-b50b-4122-ae80-877233de4c00",
+    "amount": -325,
+    "description": "Sandy",
+    "date": "2026-07-20",
+    "createdAt": "2026-07-21T06:59:50.236Z"
   }
 ]
