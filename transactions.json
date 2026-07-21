@@ -54,5 +54,12 @@
     "description": "till",
     "date": "2026-07-05",
     "createdAt": "2026-07-21T06:54:58.986Z"
+  },
+  {
+    "id": "cba35b1f-0ad5-4dbf-8ea7-85c9f334edc1",
+    "amount": -450,
+    "description": "sweet box",
+    "date": "2026-07-10",
+    "createdAt": "2026-07-21T06:55:19.623Z"
   }
 ]
