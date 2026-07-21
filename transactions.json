@@ -355,5 +355,12 @@
     "description": "till",
     "date": "2026-04-04",
     "createdAt": "2026-07-21T07:35:15.839Z"
+  },
+  {
+    "id": "24fae857-ee54-4d8b-844a-e31836fb07f4",
+    "amount": -20,
+    "description": "adhoc",
+    "date": "2026-04-04",
+    "createdAt": "2026-07-21T07:35:41.044Z"
   }
 ]
