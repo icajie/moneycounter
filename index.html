@@ -553,6 +553,12 @@
       return Number.isNaN(ms) ? 0 : ms;
     }
 
+    function createdAtMs(tx) {
+      const ms = new Date(tx.createdAt || '').getTime();
+      if (!Number.isNaN(ms)) return ms;
+      return selectedDateMs(tx.date);
+    }
+
     let toastTimer;
     function toast(msg) {
       const el = document.getElementById('toast');
@@ -564,18 +570,16 @@
 
     // ── Render ──
     function render() {
-      // Running balances by selected date (oldest -> newest), so newest row shows current total
+      // Running balances by runtime entry order (oldest -> newest).
       const normalized = transactions.map(tx => ({
         ...tx,
         amount: Number(tx.amount) || 0
       }));
 
       const asc = [...normalized].sort((a, b) => {
-        const byDate = selectedDateMs(a.date) - selectedDateMs(b.date);
-        if (byDate !== 0) return byDate;
-        const aCreated = new Date(a.createdAt || a.date || 0).getTime();
-        const bCreated = new Date(b.createdAt || b.date || 0).getTime();
-        return aCreated - bCreated;
+        const byCreated = createdAtMs(a) - createdAtMs(b);
+        if (byCreated !== 0) return byCreated;
+        return selectedDateMs(a.date) - selectedDateMs(b.date);
       });
 
       let running = 0;
@@ -611,7 +615,13 @@
         return;
       }
 
-      const sorted = [...withBal].sort((a, b) => selectedDateMs(b.date) - selectedDateMs(a.date));
+      const sorted = [...withBal].sort((a, b) => {
+        const byDate = selectedDateMs(b.date) - selectedDateMs(a.date);
+        if (byDate !== 0) return byDate;
+        const aCreated = new Date(a.createdAt || a.date || 0).getTime();
+        const bCreated = new Date(b.createdAt || b.date || 0).getTime();
+        return bCreated - aCreated;
+      });
       ledger.innerHTML = sorted.map(tx => {
         const isIn = tx.amount > 0;
         const sel  = tx.id === selectedId;
