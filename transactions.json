@@ -26,5 +26,12 @@
     "description": "Arafat & Anik",
     "date": "2026-07-04",
     "createdAt": "2026-07-21T06:53:54.134Z"
+  },
+  {
+    "id": "5731fa33-b79e-4296-9a74-f1024e7f487f",
+    "amount": -255,
+    "description": "Bev",
+    "date": "2026-07-04",
+    "createdAt": "2026-07-21T06:54:05.872Z"
   }
 ]
