@@ -649,5 +649,12 @@
     "description": "Till from 22-May to 24-Mat",
     "date": "2026-05-24",
     "createdAt": "2026-07-21T07:50:07.589Z"
+  },
+  {
+    "id": "f5e349cd-5f10-4ae4-91ec-c260f6fc6aa3",
+    "amount": -860,
+    "description": "Dio",
+    "date": "2026-05-25",
+    "createdAt": "2026-07-21T07:50:20.575Z"
   }
 ]
