@@ -796,5 +796,12 @@
     "description": "Bev",
     "date": "2026-06-19",
     "createdAt": "2026-07-21T08:01:09.691Z"
+  },
+  {
+    "id": "d5ec1e40-2899-4bcd-953a-ab2250d6c4c2",
+    "amount": -550,
+    "description": "Arafat",
+    "date": "2026-06-26",
+    "createdAt": "2026-07-21T08:01:27.373Z"
   }
 ]
