@@ -341,5 +341,12 @@
     "description": "Beni",
     "date": "2026-04-03",
     "createdAt": "2026-07-21T07:34:47.939Z"
+  },
+  {
+    "id": "57b4a925-8485-4e4d-a10a-2cf82d0f855f",
+    "amount": 80,
+    "description": "till",
+    "date": "2026-04-03",
+    "createdAt": "2026-07-21T07:35:02.673Z"
   }
 ]
