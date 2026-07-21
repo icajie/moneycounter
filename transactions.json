@@ -677,5 +677,12 @@
     "description": "till from 25-May to 28-May",
     "date": "2026-05-28",
     "createdAt": "2026-07-21T07:51:25.620Z"
+  },
+  {
+    "id": "8e8e966d-6016-4f87-93e6-cbcf7a0a1b66",
+    "amount": -200,
+    "description": "Plumber",
+    "date": "2026-05-28",
+    "createdAt": "2026-07-21T07:51:40.457Z"
   }
 ]
