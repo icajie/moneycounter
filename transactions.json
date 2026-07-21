@@ -1,12 +1,5 @@
 [
   {
-    "id": "eb9d680c-5120-4111-8797-9d36e2dbe6cb",
-    "amount": 2,
-    "description": "2",
-    "date": "2026-07-20",
-    "createdAt": "2026-07-21T03:10:52.488Z"
-  },
-  {
     "id": "475ed80a-fd6e-4ce0-a92b-4451e5f5be32",
     "amount": -2,
     "description": "2",
