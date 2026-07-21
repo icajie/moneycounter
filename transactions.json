@@ -19,5 +19,12 @@
     "description": "Till",
     "date": "2026-07-03",
     "createdAt": "2026-07-21T06:53:18.609Z"
+  },
+  {
+    "id": "bfe63db5-6410-40d5-bda7-e7a742f0be90",
+    "amount": -50,
+    "description": "Arafat & Anik",
+    "date": "2026-07-04",
+    "createdAt": "2026-07-21T06:53:54.134Z"
   }
 ]
