@@ -509,5 +509,12 @@
     "description": "till 16-Apr to 21-Apr",
     "date": "2026-04-21",
     "createdAt": "2026-07-21T07:43:52.258Z"
+  },
+  {
+    "id": "bf10c51c-6956-484d-a814-51c6bd9619f5",
+    "amount": -400,
+    "description": "Plumber",
+    "date": "2026-04-28",
+    "createdAt": "2026-07-21T07:44:15.689Z"
   }
 ]
