@@ -579,7 +579,9 @@
       const asc = [...normalized].sort((a, b) => {
         const byCreated = createdAtMs(a) - createdAtMs(b);
         if (byCreated !== 0) return byCreated;
-        return selectedDateMs(a.date) - selectedDateMs(b.date);
+        const bySelected = selectedDateMs(a.date) - selectedDateMs(b.date);
+        if (bySelected !== 0) return bySelected;
+        return String(a.id).localeCompare(String(b.id));
       });
 
       let running = 0;
@@ -616,11 +618,11 @@
       }
 
       const sorted = [...withBal].sort((a, b) => {
+        const byCreated = createdAtMs(b) - createdAtMs(a);
+        if (byCreated !== 0) return byCreated;
         const byDate = selectedDateMs(b.date) - selectedDateMs(a.date);
         if (byDate !== 0) return byDate;
-        const aCreated = new Date(a.createdAt || a.date || 0).getTime();
-        const bCreated = new Date(b.createdAt || b.date || 0).getTime();
-        return bCreated - aCreated;
+        return String(b.id).localeCompare(String(a.id));
       });
       ledger.innerHTML = sorted.map(tx => {
         const isIn = tx.amount > 0;
