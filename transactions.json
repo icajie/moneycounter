@@ -68,5 +68,12 @@
     "description": "till",
     "date": "2026-07-11",
     "createdAt": "2026-07-21T06:55:33.738Z"
+  },
+  {
+    "id": "79a1d876-01b8-4c39-a893-ce73656b80a2",
+    "amount": -810,
+    "description": "Arafat",
+    "date": "2026-07-11",
+    "createdAt": "2026-07-21T06:55:47.805Z"
   }
 ]
