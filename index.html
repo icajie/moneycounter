@@ -461,7 +461,7 @@
         <input type="text" id="desc" placeholder="Description" maxlength="60" />
       </div>
       <div class="composer-row" style="margin-top:0.625rem">
-        <input type="datetime-local" id="txdate" />
+        <input type="date" id="txdate" />
       </div>
       <div class="composer-btns">
         <button class="btn-add" onclick="submitTx(true)">+ Add Money</button>
@@ -519,8 +519,33 @@
       return '$' + Math.abs(n).toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
 
-    function fmtDate(iso) {
-      return new Date(iso).toLocaleString('en-AU', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    function fmtSelectedDate(value) {
+      if (!value) return '—';
+      const match = String(value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      if (match) {
+        const y = Number(match[1]);
+        const m = Number(match[2]);
+        const d = Number(match[3]);
+        return new Date(y, m - 1, d).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
+      }
+      return new Date(value).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
+    function fmtAddedDate(value) {
+      if (!value) return '—';
+      return new Date(value).toLocaleString('en-AU', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    }
+
+    function selectedDateMs(value) {
+      const match = String(value || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      if (match) {
+        const y = Number(match[1]);
+        const m = Number(match[2]);
+        const d = Number(match[3]);
+        return new Date(y, m - 1, d).getTime();
+      }
+      const ms = new Date(value).getTime();
+      return Number.isNaN(ms) ? 0 : ms;
     }
 
     let toastTimer;
@@ -562,17 +587,16 @@
         return;
       }
 
-      const sorted = [...withBal].sort((a, b) => new Date(b.date) - new Date(a.date));
+      const sorted = [...withBal].sort((a, b) => selectedDateMs(b.date) - selectedDateMs(a.date));
       ledger.innerHTML = sorted.map(tx => {
         const isIn = tx.amount > 0;
         const sel  = tx.id === selectedId;
-        const showAdded = tx.createdAt && tx.createdAt !== tx.date;
         return `<div class="tx ${sel ? 'selected' : ''}" onclick="selectTx('${tx.id}')">
           <div class="tx-icon ${isIn ? 'in' : 'out'}">${isIn ? '↑' : '↓'}</div>
           <div class="tx-info">
             <div class="tx-desc">${escHtml(tx.description || 'No description')}</div>
-            <div class="tx-date">Date: ${fmtDate(tx.date)}</div>
-            ${showAdded ? `<div class="tx-date" style="font-size:0.7rem;opacity:0.7">Added: ${fmtDate(tx.createdAt)}</div>` : ''}
+            <div class="tx-date">Date: ${fmtSelectedDate(tx.date)}</div>
+            <div class="tx-date" style="font-size:0.7rem;opacity:0.7">Added: ${fmtAddedDate(tx.createdAt || tx.date)}</div>
           </div>
           <div class="tx-right">
             <div class="tx-amount ${isIn ? 'in' : 'out'}">${isIn ? '+' : '−'}${fmt(tx.amount)}</div>
@@ -610,7 +634,12 @@
       try {
         const r = await fetch('/api/transactions');
         const data = await r.json();
-        if (data.transactions) transactions = data.transactions;
+        if (data.transactions) {
+          transactions = data.transactions.map(tx => ({
+            ...tx,
+            createdAt: tx.createdAt || tx.date || new Date().toISOString()
+          }));
+        }
         render();
       } catch {
         document.getElementById('ledger').innerHTML = '<div class="ledger-empty">Failed to load data.</div>';
@@ -637,21 +666,21 @@
       if (!desc) { toast('Enter a description.'); return; }
 
       const dateVal = document.getElementById('txdate').value;
-      const txDate  = dateVal ? new Date(dateVal).toISOString() : new Date().toISOString();
+      const txDate  = dateVal || toLocalDateInput(new Date());
 
       const tx = {
         id: crypto.randomUUID(),
         amount: isAdd ? amtRaw : -amtRaw,
         description: desc,
-        date: txDate
+        date: txDate,
         createdAt: new Date().toISOString()
       };
 
       transactions.push(tx);
       document.getElementById('amount').value = '';
       document.getElementById('desc').value = '';
-      // Reset date to current time for next entry
-      document.getElementById('txdate').value = toLocalDateTimeInput(new Date());
+      // Reset date to today for next entry
+      document.getElementById('txdate').value = toLocalDateInput(new Date());
       render();
 
       try {
@@ -691,13 +720,13 @@
       }
     });
 
-    function toLocalDateTimeInput(d) {
+    function toLocalDateInput(d) {
       const pad = n => String(n).padStart(2, '0');
-      return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+      return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
     }
 
     // Set date input default
-    document.getElementById('txdate').value = toLocalDateTimeInput(new Date());
+    document.getElementById('txdate').value = toLocalDateInput(new Date());
 
     load();
   </script>
