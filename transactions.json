@@ -691,5 +691,12 @@
     "description": "Dio",
     "date": "2026-05-30",
     "createdAt": "2026-07-21T07:51:52.891Z"
+  },
+  {
+    "id": "d39904f1-ad33-48ae-be62-4d31d9a5698f",
+    "amount": -220,
+    "description": "Ather",
+    "date": "2026-05-30",
+    "createdAt": "2026-07-21T07:52:03.785Z"
   }
 ]
