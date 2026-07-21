@@ -712,5 +712,12 @@
     "description": "adhoc",
     "date": "2026-06-03",
     "createdAt": "2026-07-21T07:55:11.434Z"
+  },
+  {
+    "id": "dedc3f35-04d4-4baa-8727-9841c9407798",
+    "amount": 1590,
+    "description": "till from 04-Jun-06-Jun",
+    "date": "2026-07-06",
+    "createdAt": "2026-07-21T07:55:54.822Z"
   }
 ]
