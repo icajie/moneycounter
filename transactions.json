@@ -229,5 +229,12 @@
     "description": "tim",
     "date": "2026-06-27",
     "createdAt": "2026-07-21T07:24:02.541Z"
+  },
+  {
+    "id": "c836cd2b-3108-4211-9a65-e393b98e8b1c",
+    "amount": 280,
+    "description": "Till",
+    "date": "2026-06-27",
+    "createdAt": "2026-07-21T07:24:15.376Z"
   }
 ]
