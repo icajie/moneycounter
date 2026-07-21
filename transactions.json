@@ -89,5 +89,12 @@
     "description": "Bev & Iela",
     "date": "2026-07-11",
     "createdAt": "2026-07-21T06:56:15.484Z"
+  },
+  {
+    "id": "87696ce8-5a46-474e-8d1d-23621dc9bbc3",
+    "amount": -250,
+    "description": "Tim",
+    "date": "2026-07-11",
+    "createdAt": "2026-07-21T06:56:27.977Z"
   }
 ]
