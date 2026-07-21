@@ -474,5 +474,12 @@
     "description": "till 16-Apr to 21st Apr",
     "date": "2026-07-21",
     "createdAt": "2026-07-21T07:41:06.730Z"
+  },
+  {
+    "id": "b6c01f78-42ee-4e07-985c-22bd87378391",
+    "amount": -950,
+    "description": "Dio",
+    "date": "2026-04-22",
+    "createdAt": "2026-07-21T07:41:23.672Z"
   }
 ]
