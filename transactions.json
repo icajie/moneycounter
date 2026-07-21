@@ -82,5 +82,12 @@
     "description": "Sandy",
     "date": "2026-07-11",
     "createdAt": "2026-07-21T06:56:02.714Z"
+  },
+  {
+    "id": "ef263307-1616-4e25-8f4f-4e654377700e",
+    "amount": -345,
+    "description": "Bev & Iela",
+    "date": "2026-07-11",
+    "createdAt": "2026-07-21T06:56:15.484Z"
   }
 ]
