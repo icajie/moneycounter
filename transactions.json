@@ -670,5 +670,12 @@
     "description": "Tim",
     "date": "2026-05-25",
     "createdAt": "2026-07-21T07:50:46.125Z"
+  },
+  {
+    "id": "ee2ceb91-8131-4f19-b99c-c2d7f598a2cf",
+    "amount": 1815,
+    "description": "till from 25-May to 28-May",
+    "date": "2026-05-28",
+    "createdAt": "2026-07-21T07:51:25.620Z"
   }
 ]
