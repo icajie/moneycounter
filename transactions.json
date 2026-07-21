@@ -285,5 +285,12 @@
     "description": "Arafat",
     "date": "2026-07-01",
     "createdAt": "2026-07-21T07:26:48.406Z"
+  },
+  {
+    "id": "2baaa753-0e35-4d3a-b7e5-296823f9433d",
+    "amount": -175,
+    "description": "Anik",
+    "date": "2026-07-01",
+    "createdAt": "2026-07-21T07:26:55.378Z"
   }
 ]
