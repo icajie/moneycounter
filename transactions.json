@@ -726,5 +726,12 @@
     "description": "Bev",
     "date": "2026-06-06",
     "createdAt": "2026-07-21T07:56:29.789Z"
+  },
+  {
+    "id": "ae26c4b0-24ad-494e-b7e0-d7c5fa396e15",
+    "amount": 500,
+    "description": "till",
+    "date": "2026-06-07",
+    "createdAt": "2026-07-21T07:56:43.181Z"
   }
 ]
