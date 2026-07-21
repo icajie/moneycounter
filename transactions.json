@@ -789,5 +789,12 @@
     "description": "till from 16-Jun to 23-Jun",
     "date": "2026-06-23",
     "createdAt": "2026-07-21T08:00:56.891Z"
+  },
+  {
+    "id": "802352df-1117-4361-82f8-2475bc9ecb2d",
+    "amount": -255,
+    "description": "Bev",
+    "date": "2026-06-19",
+    "createdAt": "2026-07-21T08:01:09.691Z"
   }
 ]
