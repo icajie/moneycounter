@@ -40,5 +40,12 @@
     "description": "Till",
     "date": "2026-07-05",
     "createdAt": "2026-07-21T06:54:19.202Z"
+  },
+  {
+    "id": "01edf610-6294-4cc2-9f21-897c22fd39ae",
+    "amount": -7500,
+    "description": "Bank Deposited",
+    "date": "2026-07-07",
+    "createdAt": "2026-07-21T06:54:41.123Z"
   }
 ]
