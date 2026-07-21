@@ -313,5 +313,12 @@
     "description": "Opening",
     "date": "2026-03-31",
     "createdAt": "2026-07-21T07:33:40.856Z"
+  },
+  {
+    "id": "34361538-0586-40bd-bfbe-94febceceb4d",
+    "amount": 420,
+    "description": "till",
+    "date": "2026-04-01",
+    "createdAt": "2026-07-21T07:34:00.472Z"
   }
 ]
