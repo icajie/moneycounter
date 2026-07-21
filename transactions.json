@@ -495,5 +495,12 @@
     "description": "till",
     "date": "2026-04-22",
     "createdAt": "2026-07-21T07:41:47.907Z"
+  },
+  {
+    "id": "ccad9f30-45a6-4ffe-b541-dfe03122723e",
+    "amount": -250,
+    "description": "Fridge repairs",
+    "date": "2026-04-22",
+    "createdAt": "2026-07-21T07:42:02.100Z"
   }
 ]
