@@ -577,10 +577,10 @@
       }));
 
       const asc = [...normalized].sort((a, b) => {
-        const byCreated = createdAtMs(a) - createdAtMs(b);
-        if (byCreated !== 0) return byCreated;
         const bySelected = selectedDateMs(a.date) - selectedDateMs(b.date);
         if (bySelected !== 0) return bySelected;
+        const byCreated = createdAtMs(a) - createdAtMs(b);
+        if (byCreated !== 0) return byCreated;
         return String(a.id).localeCompare(String(b.id));
       });
 
