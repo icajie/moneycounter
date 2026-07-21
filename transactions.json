@@ -572,5 +572,12 @@
     "description": "Tim",
     "date": "2026-05-04",
     "createdAt": "2026-07-21T07:46:21.029Z"
+  },
+  {
+    "id": "e21641b5-e197-4a35-ba04-3ceb7dd827c7",
+    "amount": -760,
+    "description": "Dio",
+    "date": "2026-05-04",
+    "createdAt": "2026-07-21T07:46:32.205Z"
   }
 ]
