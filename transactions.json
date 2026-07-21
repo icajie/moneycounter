@@ -747,5 +747,12 @@
     "description": "Tim",
     "date": "2026-06-08",
     "createdAt": "2026-07-21T07:57:08.295Z"
+  },
+  {
+    "id": "3bcad9bd-72ea-48c3-ae1f-c84a4cbebc3d",
+    "amount": 10,
+    "description": "adhoc",
+    "date": "2026-06-08",
+    "createdAt": "2026-07-21T07:57:20.429Z"
   }
 ]
