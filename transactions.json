@@ -775,5 +775,12 @@
     "description": "Tim",
     "date": "2026-06-14",
     "createdAt": "2026-07-21T07:59:18.873Z"
+  },
+  {
+    "id": "90e3cd43-4d3c-4495-aaf1-45602b8f9f7b",
+    "amount": -150,
+    "description": "Veggies",
+    "date": "2026-06-14",
+    "createdAt": "2026-07-21T07:59:30.493Z"
   }
 ]
