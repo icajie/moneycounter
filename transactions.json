@@ -761,5 +761,12 @@
     "description": "till from 08-Jun to 14-Jun",
     "date": "2026-06-14",
     "createdAt": "2026-07-21T07:58:47.191Z"
+  },
+  {
+    "id": "c57ac9e7-0b79-45df-9ec9-0b38fd7d4eb7",
+    "amount": -70,
+    "description": "Beni",
+    "date": "2026-06-12",
+    "createdAt": "2026-07-21T07:59:02.525Z"
   }
 ]
