@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -246,6 +246,62 @@
     .btn-add:hover, .btn-remove:hover { opacity: 0.88; }
     .btn-add:active, .btn-remove:active { transform: scale(0.97); }
 
+    /* ── Controls bar ── */
+    .controls-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.875rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .controls-sort {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .controls-sort select {
+      padding: 0.5rem 0.75rem;
+      border: 1.5px solid var(--border);
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      font-family: inherit;
+      color: var(--text);
+      background: #fff;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+
+    .controls-sort select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .btn-export {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      font-family: inherit;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+      white-space: nowrap;
+    }
+
+    .btn-export:hover { opacity: 0.88; }
+    .btn-export:active { transform: scale(0.97); }
+
     /* ── Ledger ── */
     .ledger-header {
       display: flex;
@@ -469,6 +525,19 @@
       </div>
     </div>
 
+    <!-- Controls bar -->
+    <div class="controls-bar">
+      <div class="controls-sort">
+        <label>Sort by:</label>
+        <select id="sortSelect" onchange="changeSortMode(this.value)">
+          <option value="date">Date (Newest First)</option>
+          <option value="amount-desc">Amount (Highest to Lowest)</option>
+          <option value="amount-asc">Amount (Lowest to Highest)</option>
+        </select>
+      </div>
+      <button class="btn-export" onclick="exportToCSV()">↓ Export as CSV</button>
+    </div>
+
     <!-- Ledger -->
     <div class="ledger-header">
       <span class="ledger-title">Transactions</span>
@@ -513,6 +582,7 @@
     // ── State ──
     let transactions = [];
     let selectedId = null;
+    let sortMode = 'date';
 
     // ── Helpers ──
     function fmt(n) {
@@ -618,11 +688,17 @@
       }
 
       const sorted = [...withBal].sort((a, b) => {
-        const byDate = selectedDateMs(b.date) - selectedDateMs(a.date);
-        if (byDate !== 0) return byDate;
-        const byCreated = createdAtMs(b) - createdAtMs(a);
-        if (byCreated !== 0) return byCreated;
-        return String(b.id).localeCompare(String(a.id));
+        if (sortMode === 'amount-desc') {
+          return b.amount - a.amount;
+        } else if (sortMode === 'amount-asc') {
+          return a.amount - b.amount;
+        } else {
+          const byDate = selectedDateMs(b.date) - selectedDateMs(a.date);
+          if (byDate !== 0) return byDate;
+          const byCreated = createdAtMs(b) - createdAtMs(a);
+          if (byCreated !== 0) return byCreated;
+          return String(b.id).localeCompare(String(a.id));
+        }
       });
       ledger.innerHTML = sorted.map(tx => {
         const isIn = tx.amount > 0;
@@ -754,6 +830,64 @@
         render();
         toast('Failed to delete: ' + e.message);
       }
+    }
+
+    // ── Sort & Export ──
+    function changeSortMode(mode) {
+      sortMode = mode;
+      render();
+    }
+
+    function exportToCSV() {
+      if (!transactions.length) {
+        toast('No transactions to export.');
+        return;
+      }
+
+      const normalized = transactions.map(tx => ({
+        ...tx,
+        amount: Number(tx.amount) || 0
+      }));
+
+      const asc = [...normalized].sort((a, b) => {
+        const bySelected = selectedDateMs(a.date) - selectedDateMs(b.date);
+        if (bySelected !== 0) return bySelected;
+        const byCreated = createdAtMs(a) - createdAtMs(b);
+        if (byCreated !== 0) return byCreated;
+        return String(a.id).localeCompare(String(b.id));
+      });
+
+      let running = 0;
+      const balanceById = new Map();
+      asc.forEach(tx => {
+        running += tx.amount;
+        balanceById.set(tx.id, running);
+      });
+
+      const escapeCsvField = (field) => {
+        const str = String(field);
+        if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+          return '"' + str.replace(/"/g, '""') + '"';
+        }
+        return str;
+      };
+
+      let csv = 'Description,Amount,Date,Balance\n';
+      transactions.forEach(tx => {
+        const balance = balanceById.get(tx.id) ?? 0;
+        csv += `${escapeCsvField(tx.description || 'No description')},${escapeCsvField(fmtSigned(tx.amount))},${escapeCsvField(fmtSelectedDate(tx.date))},${escapeCsvField(fmtSigned(balance))}\n`;
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      const url = URL.createObjectURL(blob);
+      link.setAttribute('href', url);
+      link.setAttribute('download', `money-counter-${new Date().toISOString().split('T')[0]}.csv`);
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      toast('CSV exported successfully.');
     }
 
     // ── Keyboard shortcuts ──
