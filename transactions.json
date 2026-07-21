@@ -299,5 +299,12 @@
     "description": "Tim",
     "date": "2026-07-01",
     "createdAt": "2026-07-21T07:27:02.572Z"
+  },
+  {
+    "id": "3385ce5e-8ac5-464e-938f-00572030fc8b",
+    "amount": -375,
+    "description": "Ather",
+    "date": "2026-07-01",
+    "createdAt": "2026-07-21T07:27:12.592Z"
   }
 ]
