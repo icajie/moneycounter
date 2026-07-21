@@ -559,12 +559,26 @@
 
     // ── Render ──
     function render() {
-      // Running balances
-      let running = 0;
-      const withBal = transactions.map(tx => {
-        running += tx.amount;
-        return { ...tx, balance: running };
+      // Running balances by selected date (oldest -> newest), so newest row shows current total
+      const asc = [...transactions].sort((a, b) => {
+        const byDate = selectedDateMs(a.date) - selectedDateMs(b.date);
+        if (byDate !== 0) return byDate;
+        const aCreated = new Date(a.createdAt || a.date || 0).getTime();
+        const bCreated = new Date(b.createdAt || b.date || 0).getTime();
+        return aCreated - bCreated;
       });
+
+      let running = 0;
+      const balanceById = new Map();
+      asc.forEach(tx => {
+        running += tx.amount;
+        balanceById.set(tx.id, running);
+      });
+
+      const withBal = transactions.map(tx => ({
+        ...tx,
+        balance: balanceById.get(tx.id) ?? 0
+      }));
 
       // Summary
       const balance = running;
