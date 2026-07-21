@@ -16,5 +16,11 @@
     "amount": -10,
     "description": "Bev wages",
     "date": "2026-07-21T02:55:16.525Z"
+  },
+  {
+    "id": "7082afae-75ab-4c96-a50e-0610a274cbd0",
+    "amount": 11,
+    "description": "11",
+    "date": "2026-07-16T02:59:00.000Z"
   }
 ]
