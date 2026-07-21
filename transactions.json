@@ -782,5 +782,12 @@
     "description": "Anik",
     "date": "2026-06-26",
     "createdAt": "2026-07-21T08:01:36.568Z"
+  },
+  {
+    "id": "c08d29c2-ee89-4810-b07f-a6e9152771e3",
+    "amount": -320,
+    "description": "Adjust",
+    "date": "2026-07-21",
+    "createdAt": "2026-07-21T08:05:07.429Z"
   }
 ]
