@@ -586,5 +586,12 @@
     "description": "Till",
     "date": "2026-05-05",
     "createdAt": "2026-07-21T07:46:48.055Z"
+  },
+  {
+    "id": "9dba35c2-b89b-4151-add0-3dc4bb5ed75e",
+    "amount": -770,
+    "description": "Dio",
+    "date": "2026-05-16",
+    "createdAt": "2026-07-21T07:46:58.451Z"
   }
 ]
