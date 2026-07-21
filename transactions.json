@@ -264,5 +264,12 @@
     "description": "Short Adj",
     "date": "2026-06-28",
     "createdAt": "2026-07-21T07:25:30.799Z"
+  },
+  {
+    "id": "e6b62420-6512-4831-a68f-0c15f2471390",
+    "amount": 470,
+    "description": "Till",
+    "date": "2026-06-29",
+    "createdAt": "2026-07-21T07:25:46.512Z"
   }
 ]
