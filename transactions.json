@@ -719,5 +719,12 @@
     "description": "till from 04-Jun-06-Jun",
     "date": "2026-07-06",
     "createdAt": "2026-07-21T07:55:54.822Z"
+  },
+  {
+    "id": "88f31eab-ffff-44ca-85f8-7db08904f0b9",
+    "amount": -245,
+    "description": "Bev",
+    "date": "2026-06-06",
+    "createdAt": "2026-07-21T07:56:29.789Z"
   }
 ]
