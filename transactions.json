@@ -306,5 +306,12 @@
     "description": "Ather",
     "date": "2026-07-01",
     "createdAt": "2026-07-21T07:27:12.592Z"
+  },
+  {
+    "id": "551bbb26-cc37-4b4f-aa38-d4c77aa9b75f",
+    "amount": -25,
+    "description": "Ather",
+    "date": "2026-07-01",
+    "createdAt": "2026-07-21T07:27:37.790Z"
   }
 ]
