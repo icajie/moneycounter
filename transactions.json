@@ -138,5 +138,12 @@
     "description": "Adjustment",
     "date": "2026-07-15",
     "createdAt": "2026-07-21T06:58:48.534Z"
+  },
+  {
+    "id": "d38f631a-a20b-4a70-9151-12f4ff7540e7",
+    "amount": 520,
+    "description": "till",
+    "date": "2026-07-19",
+    "createdAt": "2026-07-21T06:59:01.147Z"
   }
 ]
