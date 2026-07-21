@@ -628,5 +628,12 @@
     "description": "Till from 18-May to 20-May",
     "date": "2026-05-20",
     "createdAt": "2026-07-21T07:48:48.255Z"
+  },
+  {
+    "id": "ea33cad0-4fda-429c-9f07-cde5a34eeb47",
+    "amount": -900,
+    "description": "Dio",
+    "date": "2026-05-20",
+    "createdAt": "2026-07-21T07:49:01.729Z"
   }
 ]
