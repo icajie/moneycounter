@@ -397,5 +397,12 @@
     "description": "Tim",
     "date": "2026-04-07",
     "createdAt": "2026-07-21T07:37:28.778Z"
+  },
+  {
+    "id": "4c6dec08-6e2f-4c0e-a1c9-c5f524855e6f",
+    "amount": 160,
+    "description": "till",
+    "date": "2026-04-08",
+    "createdAt": "2026-07-21T07:37:43.675Z"
   }
 ]
