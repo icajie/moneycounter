@@ -1,6 +1,9 @@
 {
   "version": 2,
   "framework": null,
+  "installCommand": "npm install",
+  "buildCommand": "",
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/login.html" }
   ]
