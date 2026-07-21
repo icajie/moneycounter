@@ -257,5 +257,12 @@
     "description": "Bev",
     "date": "2026-06-28",
     "createdAt": "2026-07-21T07:25:12.824Z"
+  },
+  {
+    "id": "e8691f1f-22e8-4c04-aa78-3f5c294d37ff",
+    "amount": -345,
+    "description": "Short Adj",
+    "date": "2026-06-28",
+    "createdAt": "2026-07-21T07:25:30.799Z"
   }
 ]
