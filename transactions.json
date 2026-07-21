@@ -222,5 +222,12 @@
     "description": "Ather",
     "date": "2026-06-26",
     "createdAt": "2026-07-21T07:23:35.848Z"
+  },
+  {
+    "id": "bead3ef6-a588-4d93-9561-69d3340c0fa0",
+    "amount": -60,
+    "description": "tim",
+    "date": "2026-06-27",
+    "createdAt": "2026-07-21T07:24:02.541Z"
   }
 ]
