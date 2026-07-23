@@ -803,5 +803,12 @@
     "description": "till",
     "date": "2026-07-23",
     "createdAt": "2026-07-23T12:38:16.831Z"
+  },
+  {
+    "id": "096c8c3b-ca1f-4157-b8dd-8d324277a021",
+    "amount": -500,
+    "description": "Freezer repair",
+    "date": "2026-07-23",
+    "createdAt": "2026-07-23T12:38:30.664Z"
   }
 ]
