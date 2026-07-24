@@ -859,5 +859,12 @@
     "description": "Bev",
     "date": "2026-07-24",
     "createdAt": "2026-07-24T12:47:30.716Z"
+  },
+  {
+    "id": "770f5cdb-9daf-4772-85ae-ab52e710b3d7",
+    "amount": -115,
+    "description": "Iela",
+    "date": "2026-07-24",
+    "createdAt": "2026-07-24T12:47:37.894Z"
   }
 ]
