@@ -845,5 +845,12 @@
     "description": "Tim",
     "date": "2026-07-24",
     "createdAt": "2026-07-24T12:47:12.346Z"
+  },
+  {
+    "id": "a3734e5d-b891-4b2e-a435-51c057714f23",
+    "amount": -340,
+    "description": "Sandy",
+    "date": "2026-07-24",
+    "createdAt": "2026-07-24T12:47:21.758Z"
   }
 ]
