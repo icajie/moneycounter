@@ -873,5 +873,12 @@
     "description": "Till",
     "date": "2026-07-25",
     "createdAt": "2026-07-25T07:32:28.862Z"
+  },
+  {
+    "id": "594db860-089b-491f-ba3e-4b3aa17b2d7c",
+    "amount": -100,
+    "description": "Veggies",
+    "date": "2026-07-25",
+    "createdAt": "2026-07-25T07:33:21.244Z"
   }
 ]
