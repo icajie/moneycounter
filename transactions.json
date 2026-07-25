@@ -866,5 +866,12 @@
     "description": "Iela",
     "date": "2026-07-24",
     "createdAt": "2026-07-24T12:47:37.894Z"
+  },
+  {
+    "id": "5ebda7a5-b3cb-4fa1-9457-5093da2e9438",
+    "amount": 425,
+    "description": "Till",
+    "date": "2026-07-25",
+    "createdAt": "2026-07-25T07:32:28.862Z"
   }
 ]
