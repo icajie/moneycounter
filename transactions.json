@@ -894,5 +894,12 @@
     "description": "Till",
     "date": "2026-07-26",
     "createdAt": "2026-07-26T12:18:58.846Z"
+  },
+  {
+    "id": "ee26d718-ad5c-4006-941a-42c54bb03c3c",
+    "amount": 350,
+    "description": "Till",
+    "date": "2026-07-29",
+    "createdAt": "2026-07-30T05:49:58.671Z"
   }
 ]
