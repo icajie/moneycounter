@@ -915,5 +915,12 @@
     "description": "Till",
     "date": "2026-07-28",
     "createdAt": "2026-07-30T05:51:24.226Z"
+  },
+  {
+    "id": "5f5d460f-a149-464d-99f4-b0ead65f1197",
+    "amount": -175,
+    "description": "Arafat",
+    "date": "2026-07-31",
+    "createdAt": "2026-07-31T07:52:09.251Z"
   }
 ]
