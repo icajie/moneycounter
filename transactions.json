@@ -929,5 +929,12 @@
     "description": "Ather",
     "date": "2026-07-31",
     "createdAt": "2026-07-31T07:52:16.672Z"
+  },
+  {
+    "id": "8096da10-29f8-45a1-8188-301735d030bd",
+    "amount": -340,
+    "description": "Sandy",
+    "date": "2026-07-31",
+    "createdAt": "2026-07-31T07:52:25.541Z"
   }
 ]
