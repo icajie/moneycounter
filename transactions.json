@@ -922,5 +922,12 @@
     "description": "Arafat",
     "date": "2026-07-31",
     "createdAt": "2026-07-31T07:52:09.251Z"
+  },
+  {
+    "id": "ba595c11-aa45-4764-9d84-1ef04c53f99a",
+    "amount": -170,
+    "description": "Ather",
+    "date": "2026-07-31",
+    "createdAt": "2026-07-31T07:52:16.672Z"
   }
 ]
