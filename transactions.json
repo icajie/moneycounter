@@ -971,5 +971,12 @@
     "description": "Anik week ending 2nd Aug",
     "date": "2026-08-01",
     "createdAt": "2026-08-01T08:50:07.497Z"
+  },
+  {
+    "id": "90b2d478-8ccf-4dd4-b0a4-2b997241696c",
+    "amount": -340,
+    "description": "Arafat week ending 2nd Aug",
+    "date": "2026-08-01",
+    "createdAt": "2026-08-01T08:50:20.568Z"
   }
 ]
