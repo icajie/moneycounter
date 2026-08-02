@@ -978,5 +978,12 @@
     "description": "Arafat week ending 2nd Aug",
     "date": "2026-08-01",
     "createdAt": "2026-08-01T08:50:20.568Z"
+  },
+  {
+    "id": "a1226626-eefe-46ee-ad82-2490700cbfcf",
+    "amount": 550,
+    "description": "Till",
+    "date": "2026-08-01",
+    "createdAt": "2026-08-02T09:18:42.057Z"
   }
 ]
