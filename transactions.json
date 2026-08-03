@@ -931,13 +931,6 @@
     "createdAt": "2026-07-31T07:52:16.672Z"
   },
   {
-    "id": "8096da10-29f8-45a1-8188-301735d030bd",
-    "amount": -340,
-    "description": "Sandy",
-    "date": "2026-07-31",
-    "createdAt": "2026-07-31T07:52:25.541Z"
-  },
-  {
     "id": "0dc5aec1-a623-49e5-bb3c-9a21782b63f6",
     "amount": -575,
     "description": "MD week ending 2nd Aug",
@@ -978,12 +971,5 @@
     "description": "Arafat week ending 2nd Aug",
     "date": "2026-08-01",
     "createdAt": "2026-08-01T08:50:20.568Z"
-  },
-  {
-    "id": "a1226626-eefe-46ee-ad82-2490700cbfcf",
-    "amount": 550,
-    "description": "Till",
-    "date": "2026-08-01",
-    "createdAt": "2026-08-02T09:18:42.057Z"
   }
 ]
