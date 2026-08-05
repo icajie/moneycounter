@@ -978,5 +978,12 @@
     "description": "Sandy week ending 2nd Aug",
     "date": "2026-08-05",
     "createdAt": "2026-08-05T08:48:57.472Z"
+  },
+  {
+    "id": "4db85764-60bc-4630-9667-43b350fb43d2",
+    "amount": -525,
+    "description": "Ather Week ending 2nd Aug (7+14)",
+    "date": "2026-08-05",
+    "createdAt": "2026-08-05T08:50:54.604Z"
   }
 ]
