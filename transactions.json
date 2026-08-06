@@ -978,5 +978,12 @@
     "description": "Sandy ween Ending 2nd Aug",
     "date": "2026-08-05",
     "createdAt": "2026-08-05T08:58:44.534Z"
+  },
+  {
+    "id": "12965fad-4318-43df-8a52-94ae05922ba6",
+    "amount": 555,
+    "description": "Adjustment",
+    "date": "2026-08-06",
+    "createdAt": "2026-08-06T01:30:30.101Z"
   }
 ]
