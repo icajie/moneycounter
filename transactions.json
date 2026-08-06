@@ -985,5 +985,12 @@
     "description": "Adjustment",
     "date": "2026-08-06",
     "createdAt": "2026-08-06T01:30:30.101Z"
+  },
+  {
+    "id": "8dccf8cc-34f9-4028-a329-89782fddabdf",
+    "amount": -5000,
+    "description": "Deposited",
+    "date": "2026-08-06",
+    "createdAt": "2026-08-06T03:40:58.967Z"
   }
 ]
