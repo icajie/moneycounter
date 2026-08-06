@@ -992,5 +992,12 @@
     "description": "Deposited",
     "date": "2026-08-06",
     "createdAt": "2026-08-06T03:40:58.967Z"
+  },
+  {
+    "id": "4ddf0069-f271-4c3a-98e8-92e19763c55b",
+    "amount": 420,
+    "description": "till",
+    "date": "2026-08-03",
+    "createdAt": "2026-08-06T07:34:54.074Z"
   }
 ]
