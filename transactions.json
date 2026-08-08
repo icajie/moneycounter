@@ -1041,5 +1041,12 @@
     "description": "MD week ending 9th Aug",
     "date": "2026-08-08",
     "createdAt": "2026-08-08T12:55:13.514Z"
+  },
+  {
+    "id": "08ee3fc1-56f6-467e-8d96-9511a5a12484",
+    "amount": -175,
+    "description": "Arafat week ending 9th Aug",
+    "date": "2026-08-08",
+    "createdAt": "2026-08-08T12:55:23.460Z"
   }
 ]
