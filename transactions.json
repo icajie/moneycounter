@@ -1069,5 +1069,12 @@
     "description": "Anik week ending 9th Aug",
     "date": "2026-08-08",
     "createdAt": "2026-08-08T12:56:21.134Z"
+  },
+  {
+    "id": "522e7032-8036-4c10-8919-dc757d806233",
+    "amount": -255,
+    "description": "Bev week ending 9th Aug",
+    "date": "2026-08-08",
+    "createdAt": "2026-08-08T12:56:50.578Z"
   }
 ]
