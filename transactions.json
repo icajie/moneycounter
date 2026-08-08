@@ -1034,5 +1034,12 @@
     "description": "Till",
     "date": "2026-08-07",
     "createdAt": "2026-08-08T06:30:10.385Z"
+  },
+  {
+    "id": "39d3fe4b-b279-4270-b2ea-1522200ac13a",
+    "amount": -670,
+    "description": "MD week ending 9th Aug",
+    "date": "2026-08-08",
+    "createdAt": "2026-08-08T12:55:13.514Z"
   }
 ]
