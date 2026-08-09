@@ -1076,5 +1076,12 @@
     "description": "Bev week ending 9th Aug",
     "date": "2026-08-08",
     "createdAt": "2026-08-08T12:56:50.578Z"
+  },
+  {
+    "id": "6b070295-b082-4cfe-a554-498f8309472c",
+    "amount": 400,
+    "description": "Till",
+    "date": "2026-08-09",
+    "createdAt": "2026-08-09T09:03:58.854Z"
   }
 ]
