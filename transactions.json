@@ -1139,5 +1139,12 @@
     "description": "Till",
     "date": "2026-08-14",
     "createdAt": "2026-08-15T09:18:32.638Z"
+  },
+  {
+    "id": "153fedc6-bbed-4d9d-81e4-60182f5a6b05",
+    "amount": -495,
+    "description": "Sandy week ending 15-Aug",
+    "date": "2026-08-15",
+    "createdAt": "2026-08-15T10:34:29.094Z"
   }
 ]
