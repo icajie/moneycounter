@@ -1251,5 +1251,12 @@
     "description": "self",
     "date": "2026-08-22",
     "createdAt": "2026-08-22T09:07:52.214Z"
+  },
+  {
+    "id": "e9a990bc-056d-4ca1-ab2f-b2639740ce82",
+    "amount": -275,
+    "description": "Ather week ending 23rd Aug (sun)",
+    "date": "2026-08-22",
+    "createdAt": "2026-08-22T09:22:07.289Z"
   }
 ]
