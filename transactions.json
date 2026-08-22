@@ -1258,5 +1258,12 @@
     "description": "Ather week ending 23rd Aug (sun)",
     "date": "2026-08-22",
     "createdAt": "2026-08-22T09:22:07.289Z"
+  },
+  {
+    "id": "d7570484-864c-44be-9a52-2698bc1ed4e4",
+    "amount": -760,
+    "description": "MD week ending 23rd Aug",
+    "date": "2026-08-22",
+    "createdAt": "2026-08-22T09:22:21.048Z"
   }
 ]
