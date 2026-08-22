@@ -1272,5 +1272,12 @@
     "description": "Sandy week ending 23rd Aug",
     "date": "2026-08-22",
     "createdAt": "2026-08-22T09:22:31.278Z"
+  },
+  {
+    "id": "830f333a-cfde-499d-afaa-b853e2c7cde6",
+    "amount": -595,
+    "description": "Arafat week ending 23rd Aug",
+    "date": "2026-08-22",
+    "createdAt": "2026-08-22T09:22:43.266Z"
   }
 ]
