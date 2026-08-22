@@ -1237,5 +1237,12 @@
     "description": "till",
     "date": "2026-08-20",
     "createdAt": "2026-08-22T09:07:20.881Z"
+  },
+  {
+    "id": "d385d1fc-9784-4a7f-89a6-0b2d498f4ab6",
+    "amount": 200,
+    "description": "till (petty cash)",
+    "date": "2026-08-22",
+    "createdAt": "2026-08-22T09:07:44.451Z"
   }
 ]
