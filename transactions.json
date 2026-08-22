@@ -1265,5 +1265,12 @@
     "description": "MD week ending 23rd Aug",
     "date": "2026-08-22",
     "createdAt": "2026-08-22T09:22:21.048Z"
+  },
+  {
+    "id": "5007ef50-5acf-4e92-9580-1bb730487301",
+    "amount": -495,
+    "description": "Sandy week ending 23rd Aug",
+    "date": "2026-08-22",
+    "createdAt": "2026-08-22T09:22:31.278Z"
   }
 ]
