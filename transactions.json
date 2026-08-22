@@ -1223,5 +1223,12 @@
     "description": "Ather week ending 23rd Aug",
     "date": "2026-08-22",
     "createdAt": "2026-08-21T21:02:34.708Z"
+  },
+  {
+    "id": "9c54fcc4-06cd-4488-b0fa-f7d689571f5e",
+    "amount": 350,
+    "description": "till",
+    "date": "2026-08-21",
+    "createdAt": "2026-08-22T09:07:09.178Z"
   }
 ]
