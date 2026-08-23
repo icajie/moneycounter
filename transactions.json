@@ -1279,5 +1279,12 @@
     "description": "Anik week ending 23rd Aug",
     "date": "2026-08-22",
     "createdAt": "2026-08-22T09:22:54.221Z"
+  },
+  {
+    "id": "66bd2af8-4d0a-427f-ba7a-ac82ed380310",
+    "amount": 390,
+    "description": "till",
+    "date": "2026-08-22",
+    "createdAt": "2026-08-23T08:24:43.775Z"
   }
 ]
