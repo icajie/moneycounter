@@ -1363,5 +1363,12 @@
     "description": "Ather week ending 30th Aug",
     "date": "2026-08-28",
     "createdAt": "2026-08-28T07:01:07.579Z"
+  },
+  {
+    "id": "c120760a-1f63-4737-b0fb-553f575337d1",
+    "amount": -255,
+    "description": "Bev week ending 30th Aug",
+    "date": "2026-08-28",
+    "createdAt": "2026-08-28T07:01:14.509Z"
   }
 ]
