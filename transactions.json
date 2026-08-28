@@ -1328,5 +1328,12 @@
     "description": "till",
     "date": "2026-08-26",
     "createdAt": "2026-08-27T09:38:37.220Z"
+  },
+  {
+    "id": "2fd2e582-61b2-415d-91dc-c67ba6e0ac84",
+    "amount": -635,
+    "description": "Arafat week ending 30th Aug",
+    "date": "2026-08-28",
+    "createdAt": "2026-08-28T07:00:33.780Z"
   }
 ]
