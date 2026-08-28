@@ -1356,5 +1356,12 @@
     "description": "MD week ending 30th Aug",
     "date": "2026-08-28",
     "createdAt": "2026-08-28T07:00:58.507Z"
+  },
+  {
+    "id": "9ba20431-983c-4ea8-ac61-d2ebf90208a3",
+    "amount": -720,
+    "description": "Ather week ending 30th Aug",
+    "date": "2026-08-28",
+    "createdAt": "2026-08-28T07:01:07.579Z"
   }
 ]
