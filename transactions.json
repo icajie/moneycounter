@@ -1370,5 +1370,12 @@
     "description": "Ather week ending 30th Aug",
     "date": "2026-08-29",
     "createdAt": "2026-08-28T20:29:25.180Z"
+  },
+  {
+    "id": "706b9b3f-f4b4-491b-b466-d9e1072aabb3",
+    "amount": 575,
+    "description": "Till",
+    "date": "2026-08-27",
+    "createdAt": "2026-08-29T06:45:25.409Z"
   }
 ]
