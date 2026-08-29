@@ -1384,5 +1384,12 @@
     "description": "Till",
     "date": "2026-08-28",
     "createdAt": "2026-08-29T06:46:26.648Z"
+  },
+  {
+    "id": "1d001428-861d-4c2d-9b6c-272063d6d2dc",
+    "amount": -60,
+    "description": "Jayden",
+    "date": "2026-08-29",
+    "createdAt": "2026-08-29T12:14:08.355Z"
   }
 ]
