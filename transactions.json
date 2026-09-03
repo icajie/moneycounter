@@ -1454,5 +1454,12 @@
     "description": "Bev week ending 6th Sep",
     "date": "2026-09-03",
     "createdAt": "2026-09-03T12:52:31.282Z"
+  },
+  {
+    "id": "d6f86d10-0ab4-4639-a4fe-6313487ced31",
+    "amount": -185,
+    "description": "Anik week ending 6th Sep",
+    "date": "2026-09-03",
+    "createdAt": "2026-09-03T12:52:42.984Z"
   }
 ]
