@@ -1461,5 +1461,12 @@
     "description": "Anik week ending 6th Sep",
     "date": "2026-09-03",
     "createdAt": "2026-09-03T12:52:42.984Z"
+  },
+  {
+    "id": "4d52dd9e-4328-4d52-af12-e898a3c27e93",
+    "amount": -120,
+    "description": "Ather week ending 6th Sep",
+    "date": "2026-09-03",
+    "createdAt": "2026-09-03T12:52:57.501Z"
   }
 ]
