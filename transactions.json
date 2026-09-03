@@ -1475,5 +1475,12 @@
     "description": "Priya week ending 6th Sep",
     "date": "2026-09-03",
     "createdAt": "2026-09-03T12:53:11.246Z"
+  },
+  {
+    "id": "e8f1e559-79d7-4f33-a05a-63099515235c",
+    "amount": 10,
+    "description": "Ajustment",
+    "date": "2026-09-03",
+    "createdAt": "2026-09-03T12:54:12.323Z"
   }
 ]
