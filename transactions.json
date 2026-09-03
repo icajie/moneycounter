@@ -1447,5 +1447,12 @@
     "description": "MD week ending 6th Sep",
     "date": "2026-09-03",
     "createdAt": "2026-09-03T12:52:23.016Z"
+  },
+  {
+    "id": "928a6714-1dfc-45e8-806e-7d0dddbdcf0a",
+    "amount": -255,
+    "description": "Bev week ending 6th Sep",
+    "date": "2026-09-03",
+    "createdAt": "2026-09-03T12:52:31.282Z"
   }
 ]
