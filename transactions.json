@@ -1468,5 +1468,12 @@
     "description": "Ather week ending 6th Sep",
     "date": "2026-09-03",
     "createdAt": "2026-09-03T12:52:57.501Z"
+  },
+  {
+    "id": "ff72cb20-af3e-43e6-b8b5-eaa014b02ab3",
+    "amount": -125,
+    "description": "Priya week ending 6th Sep",
+    "date": "2026-09-03",
+    "createdAt": "2026-09-03T12:53:11.246Z"
   }
 ]
