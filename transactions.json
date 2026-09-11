@@ -1538,5 +1538,12 @@
     "description": "Hasan week ending 6th Sep",
     "date": "2026-09-11",
     "createdAt": "2026-09-11T12:33:19.324Z"
+  },
+  {
+    "id": "3fae95d7-b785-45f9-8bc5-9f7357b0298f",
+    "amount": -615,
+    "description": "Arafat week ending 13th Sep",
+    "date": "2026-09-11",
+    "createdAt": "2026-09-11T12:33:47.138Z"
   }
 ]
