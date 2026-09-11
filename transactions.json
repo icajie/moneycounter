@@ -1580,5 +1580,12 @@
     "description": "Bev week ending 13th Sep",
     "date": "2026-09-11",
     "createdAt": "2026-09-11T12:34:47.717Z"
+  },
+  {
+    "id": "75dd3288-94a8-4c49-a4e5-1eadf1fa5711",
+    "amount": -80,
+    "description": "Short",
+    "date": "2026-09-11",
+    "createdAt": "2026-09-11T12:44:27.023Z"
   }
 ]
