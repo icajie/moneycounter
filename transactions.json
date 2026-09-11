@@ -1552,5 +1552,12 @@
     "description": "Anik week ending 13th Sep",
     "date": "2026-09-11",
     "createdAt": "2026-09-11T12:33:54.884Z"
+  },
+  {
+    "id": "5e481a03-1394-41de-976a-c467f6892d35",
+    "amount": -450,
+    "description": "Sandy week ending 13th Sep",
+    "date": "2026-09-11",
+    "createdAt": "2026-09-11T12:34:06.098Z"
   }
 ]
