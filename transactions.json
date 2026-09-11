@@ -1531,5 +1531,12 @@
     "description": "Till",
     "date": "2026-09-09",
     "createdAt": "2026-09-10T06:38:58.453Z"
+  },
+  {
+    "id": "bdc1b8f5-8463-4b78-ba6e-051c2ead0af4",
+    "amount": -170,
+    "description": "Hasan week ending 6th Sep",
+    "date": "2026-09-11",
+    "createdAt": "2026-09-11T12:33:19.324Z"
   }
 ]
