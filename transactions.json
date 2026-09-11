@@ -1580,5 +1580,12 @@
     "description": "Bev week ending 13th Sep",
     "date": "2026-09-11",
     "createdAt": "2026-09-11T12:34:47.717Z"
+  },
+  {
+    "id": "fe72eb64-6353-4e44-a4a3-5fd13a00a10b",
+    "amount": -60,
+    "description": "Jayden week ending 6th Sep",
+    "date": "2026-09-06",
+    "createdAt": "2026-09-11T12:43:28.509Z"
   }
 ]
