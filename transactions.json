@@ -1545,5 +1545,12 @@
     "description": "Arafat week ending 13th Sep",
     "date": "2026-09-11",
     "createdAt": "2026-09-11T12:33:47.138Z"
+  },
+  {
+    "id": "3c884272-388d-4555-94af-133ee903c5b9",
+    "amount": -180,
+    "description": "Anik week ending 13th Sep",
+    "date": "2026-09-11",
+    "createdAt": "2026-09-11T12:33:54.884Z"
   }
 ]
