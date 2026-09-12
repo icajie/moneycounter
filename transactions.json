@@ -1587,5 +1587,12 @@
     "description": "Short",
     "date": "2026-09-11",
     "createdAt": "2026-09-11T12:44:27.023Z"
+  },
+  {
+    "id": "bf1a02cd-5722-42a9-bce0-0663af1d6928",
+    "amount": 490,
+    "description": "Till",
+    "date": "2026-09-10",
+    "createdAt": "2026-09-12T12:06:04.853Z"
   }
 ]
