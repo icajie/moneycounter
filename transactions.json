@@ -1629,5 +1629,12 @@
     "description": "till",
     "date": "2026-09-16",
     "createdAt": "2026-09-17T08:31:57.004Z"
+  },
+  {
+    "id": "bd999c53-62eb-438a-9777-e4da572068ce",
+    "amount": -115,
+    "description": "Priya week ending 13th Sep",
+    "date": "2026-09-17",
+    "createdAt": "2026-09-17T08:32:23.591Z"
   }
 ]
