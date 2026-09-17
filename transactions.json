@@ -1615,5 +1615,12 @@
     "description": "Fridge service",
     "date": "2026-09-13",
     "createdAt": "2026-09-13T11:05:06.044Z"
+  },
+  {
+    "id": "a1281311-84b3-4b4f-9e43-ac75e54403d8",
+    "amount": 445,
+    "description": "till",
+    "date": "2026-09-15",
+    "createdAt": "2026-09-17T08:30:55.502Z"
   }
 ]
