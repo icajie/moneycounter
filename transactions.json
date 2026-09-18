@@ -1671,5 +1671,12 @@
     "description": "Sandy ending 20th Sep",
     "date": "2026-09-18",
     "createdAt": "2026-09-18T12:42:09.806Z"
+  },
+  {
+    "id": "b23b3826-6673-4765-abb1-8a6b5f32c4ff",
+    "amount": -535,
+    "description": "MD ending 20th Sep",
+    "date": "2026-09-18",
+    "createdAt": "2026-09-18T12:42:21.070Z"
   }
 ]
