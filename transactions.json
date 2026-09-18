@@ -1699,5 +1699,12 @@
     "description": "Hasan ending 13th Sep",
     "date": "2026-09-18",
     "createdAt": "2026-09-18T12:42:56.158Z"
+  },
+  {
+    "id": "b9916882-bba4-474e-a746-a9751d6e8217",
+    "amount": -60,
+    "description": "Adjustment",
+    "date": "2026-09-18",
+    "createdAt": "2026-09-18T12:43:58.822Z"
   }
 ]
