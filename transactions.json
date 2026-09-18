@@ -1678,5 +1678,12 @@
     "description": "MD ending 20th Sep",
     "date": "2026-09-18",
     "createdAt": "2026-09-18T12:42:21.070Z"
+  },
+  {
+    "id": "29471a9f-e494-402e-b308-c18df6208ec8",
+    "amount": -535,
+    "description": "Ather ending 20th Sep",
+    "date": "2026-09-18",
+    "createdAt": "2026-09-18T12:42:28.404Z"
   }
 ]
