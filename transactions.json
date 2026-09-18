@@ -1664,5 +1664,12 @@
     "description": "Anik ending 20th Sep",
     "date": "2026-09-18",
     "createdAt": "2026-09-18T12:41:59.504Z"
+  },
+  {
+    "id": "9bc0b548-e14e-4434-81a9-3bf80346dce5",
+    "amount": -495,
+    "description": "Sandy ending 20th Sep",
+    "date": "2026-09-18",
+    "createdAt": "2026-09-18T12:42:09.806Z"
   }
 ]
