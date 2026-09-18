@@ -1692,5 +1692,12 @@
     "description": "Bev ending 20th Sep",
     "date": "2026-09-18",
     "createdAt": "2026-09-18T12:42:36.170Z"
+  },
+  {
+    "id": "007da197-314d-411c-82df-f1ccbf1f7383",
+    "amount": -170,
+    "description": "Hasan ending 13th Sep",
+    "date": "2026-09-18",
+    "createdAt": "2026-09-18T12:42:56.158Z"
   }
 ]
