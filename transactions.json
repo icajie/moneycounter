@@ -1685,5 +1685,12 @@
     "description": "Ather ending 20th Sep",
     "date": "2026-09-18",
     "createdAt": "2026-09-18T12:42:28.404Z"
+  },
+  {
+    "id": "441af66c-63e3-4459-a2bc-9f86a279ee57",
+    "amount": -255,
+    "description": "Bev ending 20th Sep",
+    "date": "2026-09-18",
+    "createdAt": "2026-09-18T12:42:36.170Z"
   }
 ]
