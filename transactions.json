@@ -1720,5 +1720,12 @@
     "description": "Till",
     "date": "2026-09-18",
     "createdAt": "2026-09-19T03:46:44.283Z"
+  },
+  {
+    "id": "bbcd7d06-260d-47f3-b320-ce7f61b72081",
+    "amount": -80,
+    "description": "Jayden",
+    "date": "2026-09-19",
+    "createdAt": "2026-09-19T03:49:15.281Z"
   }
 ]
