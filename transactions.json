@@ -1706,5 +1706,12 @@
     "description": "Adjustment",
     "date": "2026-09-18",
     "createdAt": "2026-09-18T12:43:58.822Z"
+  },
+  {
+    "id": "7e63a35c-0789-4453-b8ad-16e56b8691e6",
+    "amount": 470,
+    "description": "Till",
+    "date": "2026-09-17",
+    "createdAt": "2026-09-19T03:46:29.808Z"
   }
 ]
