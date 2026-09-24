@@ -1734,5 +1734,12 @@
     "description": "Jovi",
     "date": "2026-09-19",
     "createdAt": "2026-09-19T03:49:45.835Z"
+  },
+  {
+    "id": "79170611-b3a9-4454-821e-3ce680ec7360",
+    "amount": -35,
+    "description": "Beni",
+    "date": "2026-09-22",
+    "createdAt": "2026-09-24T07:17:39.776Z"
   }
 ]
