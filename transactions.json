@@ -1797,5 +1797,12 @@
     "description": "Hasan week ending 27th Sep",
     "date": "2026-09-25",
     "createdAt": "2026-09-25T10:48:59.764Z"
+  },
+  {
+    "id": "f2974735-f52c-465e-9459-ca440a39bd86",
+    "amount": -170,
+    "description": "Hasan week ending 29th Sep",
+    "date": "2026-09-25",
+    "createdAt": "2026-09-25T10:49:14.604Z"
   }
 ]
