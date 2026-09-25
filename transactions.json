@@ -1804,5 +1804,12 @@
     "description": "Hasan week ending 29th Sep",
     "date": "2026-09-25",
     "createdAt": "2026-09-25T10:49:14.604Z"
+  },
+  {
+    "id": "9f11ad29-eb95-4cb3-ba08-7149a9e54446",
+    "amount": -175,
+    "description": "Ather week ending 29th Sep",
+    "date": "2026-09-25",
+    "createdAt": "2026-09-25T10:49:30.089Z"
   }
 ]
