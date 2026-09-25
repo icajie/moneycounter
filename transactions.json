@@ -1783,5 +1783,12 @@
     "description": "Sandy week ending 27th Sep",
     "date": "2026-09-25",
     "createdAt": "2026-09-25T10:48:29.012Z"
+  },
+  {
+    "id": "8e0237f3-452e-4799-a45d-1bfd35775eb2",
+    "amount": -625,
+    "description": "MD week ending 27th Sep",
+    "date": "2026-09-25",
+    "createdAt": "2026-09-25T10:48:44.925Z"
   }
 ]
