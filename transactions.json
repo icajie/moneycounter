@@ -1832,5 +1832,12 @@
     "description": "Arafat week ending 27th Sep",
     "date": "2026-09-25",
     "createdAt": "2026-09-25T10:50:09.639Z"
+  },
+  {
+    "id": "1e6bdea1-b3f2-47f3-bd41-e8965a89d1e2",
+    "amount": -275,
+    "description": "Arafat week ending 29th Sep",
+    "date": "2026-09-25",
+    "createdAt": "2026-09-25T10:50:23.463Z"
   }
 ]
