@@ -1790,5 +1790,12 @@
     "description": "MD week ending 27th Sep",
     "date": "2026-09-25",
     "createdAt": "2026-09-25T10:48:44.925Z"
+  },
+  {
+    "id": "46d1f9be-3e55-4260-9ee0-f7390484df37",
+    "amount": -145,
+    "description": "Hasan week ending 27th Sep",
+    "date": "2026-09-25",
+    "createdAt": "2026-09-25T10:48:59.764Z"
   }
 ]
