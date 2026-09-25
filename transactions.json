@@ -1839,5 +1839,12 @@
     "description": "Ather week ending 29th Sep",
     "date": "2026-09-25",
     "createdAt": "2026-09-25T10:50:57.205Z"
+  },
+  {
+    "id": "01736fb9-f48d-41e4-86cf-c24bdf04b29b",
+    "amount": -325,
+    "description": "Arafat week ending 27th Sep",
+    "date": "2026-09-25",
+    "createdAt": "2026-09-25T10:56:23.981Z"
   }
 ]
